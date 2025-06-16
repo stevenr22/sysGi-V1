@@ -1,87 +1,102 @@
 <!-- registro -->
 <div class="min-h-screen flex items-center justify-center bg-gray-100">
-  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
-    <div class="flex flex-col items-center mb-4">
-      <!-- Ícono usuario + nuevo -->
-      <i class="fas fa-user-plus text-blue-600 text-5xl mb-2"></i>
-      <h2 class="text-xl font-semibold text-gray-800">Registrate</h2>
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
+        <div class="flex flex-col items-center mb-4">
+            <!-- Ícono usuario + nuevo -->
+            <i class="fas fa-user-plus text-blue-600 text-5xl mb-2"></i>
+            <h2 class="text-xl font-semibold text-gray-800">Registrate</h2>
+        </div>
+        <form>
+            <!-- Nombre -->
+            <div class="mb-4">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
+                        <i class="fas fa-id-badge"></i>
+                    </span>
+                    <input id="nombre" type="text"
+                        class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent"
+                        placeholder="Nombre" />
+                </div>
+            </div>
+
+            <!-- Apellido -->
+            <div class="mb-4">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
+                        <i class="fas fa-id-badge"></i>
+                    </span>
+                    <input id="apellido" type="text"
+                        class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent"
+                        placeholder="Apellido" />
+                </div>
+            </div>
+
+            <!-- Dirección -->
+            <div class="mb-4">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    <input id="direccion" type="text"
+                        class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent"
+                        placeholder="Dirección" />
+                </div>
+            </div>
+
+            <!-- Cédula -->
+            <div class="mb-4">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
+                        <i class="fas fa-id-card"></i>
+                    </span>
+                    <input id="cedula" type="text"
+                        class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent"
+                        placeholder="Cédula" />
+                </div>
+            </div>
+
+            <!-- Edad -->
+            <div class="mb-4">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
+                        <i class="fas fa-calendar-alt"></i>
+                    </span>
+                    <input id="edad" type="number" min="0"
+                        class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent"
+                        placeholder="Edad" />
+                </div>
+            </div>
+
+            <!-- Nombre de usuario -->
+            <div class="mb-4">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <input id="username" type="text"
+                        class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent"
+                        placeholder="Nombre de usuario" />
+                </div>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-6">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input id="password" type="password"
+                        class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent"
+                        placeholder="Contraseña" />
+                </div>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition font-medium">Entrar</button>
+        </form>
+        <div class="flex justify-between mt-6 text-xs text-gray-500">
+            <a href="#" class="hover:text-blue-600 transition">Olvidé mi contraseña</a>
+            <a routerLink="/" class="hover:text-blue-600 transition">Registrarse</a>
+        </div>
     </div>
-    <form>
-      <!-- Nombre -->
-      <div class="mb-4">
-        <div class="relative">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
-            <i class="fas fa-id-badge"></i>
-          </span>
-          <input id="nombre" type="text" class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent" placeholder="Nombre" />
-        </div>
-      </div>
-
-      <!-- Apellido -->
-      <div class="mb-4">
-        <div class="relative">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
-            <i class="fas fa-id-badge"></i>
-          </span>
-          <input id="apellido" type="text" class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent" placeholder="Apellido" />
-        </div>
-      </div>
-
-      <!-- Dirección -->
-      <div class="mb-4">
-        <div class="relative">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
-            <i class="fas fa-home"></i>
-          </span>
-          <input id="direccion" type="text" class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent" placeholder="Dirección" />
-        </div>
-      </div>
-
-      <!-- Cédula -->
-      <div class="mb-4">
-        <div class="relative">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
-            <i class="fas fa-id-card"></i>
-          </span>
-          <input id="cedula" type="text" class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent" placeholder="Cédula" />
-        </div>
-      </div>
-
-      <!-- Edad -->
-      <div class="mb-4">
-        <div class="relative">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
-            <i class="fas fa-calendar-alt"></i>
-          </span>
-          <input id="edad" type="number" min="0" class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent" placeholder="Edad" />
-        </div>
-      </div>
-
-      <!-- Nombre de usuario -->
-      <div class="mb-4">
-        <div class="relative">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
-            <i class="fas fa-user"></i>
-          </span>
-          <input id="username" type="text" class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent" placeholder="Nombre de usuario" />
-        </div>
-      </div>
-
-      <!-- Contraseña -->
-      <div class="mb-6">
-        <div class="relative">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400">
-            <i class="fas fa-lock"></i>
-          </span>
-          <input id="password" type="password" class="w-full pl-9 py-2 border-0 border-b border-gray-300 focus:border-blue-500 focus:ring-0 bg-transparent" placeholder="Contraseña" />
-        </div>
-      </div>
-
-      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition font-medium">Entrar</button>
-    </form>
-    <div class="flex justify-between mt-6 text-xs text-gray-500">
-      <a href="#" class="hover:text-blue-600 transition">Olvidé mi contraseña</a>
-      <a routerLink="/" class="hover:text-blue-600 transition">Registrarse</a>
-    </div>
-  </div>
 </div>
