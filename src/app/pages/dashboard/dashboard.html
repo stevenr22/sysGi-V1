@@ -1,73 +1,69 @@
-    <div class="d-flex flex-column vh-100">
-      <!-- Header con botón hamburguesa -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Dashboard</a>
-          <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#sidebar"
-            aria-controls="sidebar"
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
+<!-- HEADER -->
+<header class="navbar navbar-light bg-light border-bottom px-3">
+  <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
+  <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+    <i class="fas fa-bars"></i>
+  </button>
+  <a class="navbar-brand ms-2" href="#">Mi Dashboard</a>
+  <div class="ms-auto">
+    <button class="btn btn-outline-primary btn-sm me-2">
+      <i class="fas fa-user"></i> Perfil
+    </button>
+    <button class="btn btn-outline-danger btn-sm">
+      <i class="fas fa-sign-out-alt"></i> Salir
+    </button>
+  </div>
+</header>
 
-      <div class="d-flex flex-grow-1">
-        <!-- Sidebar -->
-        <div 
-          class="collapse d-md-block bg-light border-end p-3" 
-          id="sidebar" 
-          style="width: 220px;"
-        >
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Usuarios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reportes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Configuración</a>
-            </li>
-          </ul>
-        </div>
+<div class="container-fluid">
+  <div class="row">
 
-        <!-- Main -->
-        <main class="p-4 flex-grow-1">
-          <h2>Bienvenido</h2>
-          <p>Este es el contenido principal del dashboard.</p>
+    <!-- NAVBAR LATERAL EN ESCRITORIO -->
+    <nav class="col-md-2 d-none d-md-block bg-light border-end min-vh-100 p-3">
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2">
+          <a class="nav-link active" href="#"><i class="fas fa-home"></i> Inicio</a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Reportes</a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link" href="#"><i class="fas fa-users"></i> Usuarios</a>
+        </li>
+      </ul>
+    </nav>
 
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Tarjeta 1</h5>
-                  <p class="card-text">Contenido de la tarjeta 1.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Tarjeta 2</h5>
-                  <p class="card-text">Contenido de la tarjeta 2.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
+    <!-- NAVBAR OFFCANVAS EN MÓVIL -->
+    <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebarMenuLabel">Menú</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
       </div>
-
-      <!-- Footer -->
-      <footer class="bg-dark text-white text-center py-2">
-        &copy; 2025 Mi Dashboard - Todos los derechos reservados
-      </footer>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a class="nav-link active" href="#" data-bs-dismiss="offcanvas"><i class="fas fa-home"></i> Inicio</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#" data-bs-dismiss="offcanvas"><i class="fas fa-chart-bar"></i> Reportes</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="#" data-bs-dismiss="offcanvas"><i class="fas fa-users"></i> Usuarios</a>
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <!-- MAIN -->
+    <main class="col-md-10 ms-sm-auto px-4 py-4">
+      <h2>Bienvenido</h2>
+      <p>Este es el contenido principal del dashboard.</p>
+    </main>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-light border-top text-center py-3 mt-auto">
+  <small>&copy; 2025 Mi Empresa</small>
+</footer>
