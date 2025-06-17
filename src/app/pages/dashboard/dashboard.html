@@ -1,0 +1,72 @@
+    <div class="min-h-screen bg-gray-100 flex">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white shadow-md">
+        <div class="p-6 text-xl font-bold border-b">Mi Dashboard</div>
+        <nav class="mt-6">
+          <a href="#" class="block px-6 py-3 hover:bg-gray-200">Inicio</a>
+          <a href="#" class="block px-6 py-3 hover:bg-gray-200">Usuarios</a>
+          <a href="#" class="block px-6 py-3 hover:bg-gray-200">Reportes</a>
+          <a href="#" class="block px-6 py-3 hover:bg-gray-200">Configuración</a>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <main class="flex-1 p-6">
+        <header class="mb-6 flex justify-between items-center">
+          <h1 class="text-3xl font-semibold text-gray-700">Dashboard</h1>
+          <button
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            Nuevo reporte
+          </button>
+        </header>
+
+        <!-- Cards -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-gray-700 font-bold mb-2">Usuarios</h2>
+            <p class="text-3xl font-semibold">1,234</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-gray-700 font-bold mb-2">Ventas</h2>
+            <p class="text-3xl font-semibold">$45,000</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-gray-700 font-bold mb-2">Visitas</h2>
+            <p class="text-3xl font-semibold">12,345</p>
+          </div>
+        </section>
+
+        <!-- Table -->
+        <section class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-gray-700 font-bold mb-4">Últimos usuarios registrados</h2>
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr>
+                <th class="border-b px-4 py-2">Nombre</th>
+                <th class="border-b px-4 py-2">Correo</th>
+                <th class="border-b px-4 py-2">Rol</th>
+                <th class="border-b px-4 py-2">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users" class="hover:bg-gray-100">
+                <td class="border-b px-4 py-2">{{ user.name }}</td>
+                <td class="border-b px-4 py-2">{{ user.email }}</td>
+                <td class="border-b px-4 py-2">{{ user.role }}</td>
+                <td class="border-b px-4 py-2">
+                  <span
+                    [ngClass]="{
+                      'text-green-600': user.active,
+                      'text-red-600': !user.active
+                    }"
+                  >
+                    {{ user.active ? 'Activo' : 'Inactivo' }}
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
