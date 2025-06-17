@@ -1,77 +1,80 @@
-<!-- Layout principal -->
-<div class="flex h-screen bg-gray-100">
+<!-- Layout principal minimalista -->
+<div class="flex h-screen bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Sidebar -->
-  <div class="w-64 bg-white shadow-md h-full">
-    <div class="p-6 font-bold text-xl">Mi Panel</div>
-    <nav class="mt-4">
-      <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-200">Inicio</a>
-      <!-- Otros enlaces si deseas -->
+  <!-- Sidebar minimalista -->
+  <aside class="w-60 bg-white border-r border-gray-200 hidden md:block">
+    <div class="px-6 py-4 text-xl font-semibold tracking-wide">📊 Dashboard</div>
+    <nav class="mt-6 space-y-2">
+      <a href="#" class="block px-6 py-2 text-sm hover:bg-gray-100 rounded transition">Inicio</a>
+      <a href="#" class="block px-6 py-2 text-sm hover:bg-gray-100 rounded transition">Reportes</a>
+      <a href="#" class="block px-6 py-2 text-sm hover:bg-gray-100 rounded transition">Usuarios</a>
     </nav>
-  </div>
+  </aside>
 
-  <!-- Contenido principal -->
+  <!-- Contenedor principal -->
   <div class="flex-1 flex flex-col">
 
-    <!-- Header -->
-    <header class="bg-white shadow px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-semibold">Dashboard</h1>
-      <div>
-        <button class="bg-gray-200 px-4 py-2 rounded-full">Usuario</button>
-      </div>
+    <!-- Header minimalista -->
+    <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+      <h1 class="text-lg font-medium">Resumen general</h1>
+      <button class="text-sm bg-gray-100 px-3 py-1.5 rounded hover:bg-gray-200 transition">👤 Usuario</button>
     </header>
 
     <!-- Contenido del dashboard -->
-    <main class="flex-1 overflow-y-auto p-6">
+    <main class="flex-1 p-6 overflow-y-auto">
 
-      <!-- Sección de tarjetas (KPIs) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <p class="text-gray-500">Usuarios</p>
-          <h2 class="text-2xl font-bold">150</h2>
+      <!-- Tarjetas de resumen -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+          <p class="text-sm text-gray-500 mb-1">Usuarios</p>
+          <h2 class="text-xl font-semibold">150</h2>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <p class="text-gray-500">Ventas</p>
-          <h2 class="text-2xl font-bold">$4,200</h2>
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+          <p class="text-sm text-gray-500 mb-1">Ventas</p>
+          <h2 class="text-xl font-semibold">$4,200</h2>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <p class="text-gray-500">Visitas</p>
-          <h2 class="text-2xl font-bold">12,000</h2>
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+          <p class="text-sm text-gray-500 mb-1">Visitas</p>
+          <h2 class="text-xl font-semibold">12,000</h2>
         </div>
-      </div>
+      </section>
 
-      <!-- Tabla de datos -->
-      <div class="bg-white rounded-lg shadow overflow-x-auto">
-        <table class="min-w-full">
-          <thead class="bg-gray-200 text-gray-700">
+      <!-- Tabla de datos simplificada -->
+      <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50 text-gray-600 uppercase tracking-wide text-xs border-b border-gray-200">
             <tr>
               <th class="text-left px-6 py-3">Nombre</th>
               <th class="text-left px-6 py-3">Correo</th>
               <th class="text-left px-6 py-3">Estado</th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="border-b">
+          <tbody class="divide-y divide-gray-100">
+            <tr>
               <td class="px-6 py-4">Ana Pérez</td>
               <td class="px-6 py-4">ana@example.com</td>
-              <td class="px-6 py-4">Activo</td>
+              <td class="px-6 py-4">
+                <span class="inline-block bg-green-100 text-green-800 px-2 py-0.5 rounded-full text-xs">Activo</span>
+              </td>
             </tr>
-            <tr class="border-b">
+            <tr>
               <td class="px-6 py-4">Carlos Díaz</td>
               <td class="px-6 py-4">carlos@example.com</td>
-              <td class="px-6 py-4">Inactivo</td>
+              <td class="px-6 py-4">
+                <span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded-full text-xs">Inactivo</span>
+              </td>
             </tr>
-            <tr class="border-b">
+            <tr>
               <td class="px-6 py-4">Lucía Gómez</td>
               <td class="px-6 py-4">lucia@example.com</td>
-              <td class="px-6 py-4">Activo</td>
+              <td class="px-6 py-4">
+                <span class="inline-block bg-green-100 text-green-800 px-2 py-0.5 rounded-full text-xs">Activo</span>
+              </td>
             </tr>
           </tbody>
         </table>
-      </div>
+      </section>
 
     </main>
-
   </div>
-
 </div>
