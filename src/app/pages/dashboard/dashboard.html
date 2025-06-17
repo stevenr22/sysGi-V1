@@ -1,1 +1,82 @@
-<p>dashboard works!</p>
+<!-- dashboard.component.html -->
+<div class="flex h-screen flex-col">
+  <!-- Header -->
+  <header class="flex items-center justify-between bg-gray-800 text-white p-4 shadow-md">
+    <!-- Logo y Nombre -->
+    <div class="flex items-center gap-2">
+      <i class="fas fa-cubes text-xl"></i>
+      <span class="text-lg font-bold">sysGi</span>
+    </div>
+
+    <!-- Bienvenida -->
+    <div class="text-center text-sm md:text-base">
+      Bienvenido <strong>@usuario</strong>
+    </div>
+
+    <!-- Iconos de usuario -->
+    <div class="flex items-center gap-4">
+      <button class="hover:text-gray-300"><i class="fas fa-user"></i></button>
+      <button class="hover:text-gray-300"><i class="fas fa-bell"></i></button>
+      <button class="hover:text-red-400"><i class="fas fa-sign-out-alt"></i></button>
+    </div>
+  </header>
+
+  <div class="flex flex-1 overflow-hidden">
+    <!-- Sidebar / Navbar -->
+    <nav class="w-64 bg-gray-900 text-white p-4 space-y-4">
+      <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700"><i class="fas fa-home mr-2"></i>Inicio</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700"><i class="fas fa-users mr-2"></i>Usuarios</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700"><i class="fas fa-chart-bar mr-2"></i>Reportes</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700"><i class="fas fa-cog mr-2"></i>Configuración</a>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 bg-gray-100 p-6 overflow-y-auto">
+      <!-- Tarjeta de formulario -->
+      <section class="bg-white rounded-lg shadow p-6 mb-6">
+        <h2 class="text-lg font-semibold mb-4">Formulario</h2>
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Nombre" class="p-2 border rounded">
+          <input type="email" placeholder="Correo" class="p-2 border rounded">
+          <input type="text" placeholder="Teléfono" class="p-2 border rounded">
+          <input type="text" placeholder="Dirección" class="p-2 border rounded">
+          <div class="md:col-span-2 text-right">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Guardar</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Tabla de ejemplo -->
+      <section class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-lg font-semibold mb-4">Tabla de Usuarios</h2>
+        <table class="w-full table-auto border-collapse">
+          <thead>
+            <tr class="bg-gray-200 text-left">
+              <th class="p-2">Nombre</th>
+              <th class="p-2">Correo</th>
+              <th class="p-2">Rol</th>
+              <th class="p-2">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="p-2">Juan Pérez</td>
+              <td class="p-2">juan@mail.com</td>
+              <td class="p-2">Admin</td>
+              <td class="p-2 space-x-2">
+                <button class="text-blue-600 hover:underline">Editar</button>
+                <button class="text-red-600 hover:underline">Eliminar</button>
+              </td>
+            </tr>
+            <!-- Más filas aquí -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-3 text-sm">
+    &copy; 2025 sysGi - Todos los derechos reservados.
+  </footer>
+</div>
