@@ -1,51 +1,82 @@
-<!-- dashboard-navbar.component.html -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Logo" width="32" height="32" class="me-2">
-      Dashboard
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDashboard" aria-controls="navbarDashboard" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarDashboard">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Calendar</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-        <li class="nav-item me-2">
-          <button class="btn btn-link text-light position-relative p-0" type="button" aria-label="Notificaciones">
-            <i class="fas fa-bell fa-lg"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6em;">
-              3
-              <span class="visually-hidden">unread messages</span>
-            </span>
-          </button>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarUserDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Avatar" width="32" height="32" class="rounded-circle me-2">
-            <span class="d-none d-lg-inline">Usuario</span>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="navbarUserDropdown">
-            <li><a class="dropdown-item" href="#">Perfil</a></li>
-            <li><a class="dropdown-item" href="#">Configuración</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    <a class="navbar-brand" href="#">Mi Dashboard</a>
   </div>
 </nav>
+
+<!-- Main Container -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Tarjetas resumen -->
+    <div class="col-md-4 mb-3">
+      <div class="card text-white bg-primary shadow">
+        <div class="card-body">
+          <h5 class="card-title">Usuarios</h5>
+          <p class="card-text display-6">150</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card text-white bg-success shadow">
+        <div class="card-body">
+          <h5 class="card-title">Ventas</h5>
+          <p class="card-text display-6">$2,500</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card text-white bg-warning shadow">
+        <div class="card-body">
+          <h5 class="card-title">Pendientes</h5>
+          <p class="card-text display-6">8</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabla de datos -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow">
+        <div class="card-header bg-secondary text-white">
+          <h5 class="mb-0">Últimas actividades</h5>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-striped table-hover mb-0">
+            <thead class="table-dark">
+              <tr>
+                <th>#</th>
+                <th>Usuario</th>
+                <th>Acción</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Juan</td>
+                <td>Inicio sesión</td>
+                <td>2025-06-17</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>María</td>
+                <td>Actualizó perfil</td>
+                <td>2025-06-16</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Carlos</td>
+                <td>Realizó compra</td>
+                <td>2025-06-15</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
