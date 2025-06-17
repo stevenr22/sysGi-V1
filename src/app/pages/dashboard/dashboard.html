@@ -1,12 +1,29 @@
     <div class="d-flex flex-column vh-100">
-      <!-- Header -->
-      <header class="bg-primary text-white p-3">
-        <h1 class="h4 mb-0">Dashboard</h1>
-      </header>
+      <!-- Header con botón hamburguesa -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Dashboard</a>
+          <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#sidebar"
+            aria-controls="sidebar"
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
 
       <div class="d-flex flex-grow-1">
         <!-- Sidebar -->
-        <nav class="bg-light border-end p-3" style="width: 220px;">
+        <div 
+          class="collapse d-md-block bg-light border-end p-3" 
+          id="sidebar" 
+          style="width: 220px;"
+        >
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link active" href="#">Inicio</a>
@@ -21,27 +38,27 @@
               <a class="nav-link" href="#">Configuración</a>
             </li>
           </ul>
-        </nav>
+        </div>
 
         <!-- Main -->
         <main class="p-4 flex-grow-1">
-          <h2>Bienvenido al panel</h2>
+          <h2>Bienvenido</h2>
           <p>Este es el contenido principal del dashboard.</p>
 
           <div class="row">
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Card 1</h5>
-                  <p class="card-text">Descripción de la tarjeta 1.</p>
+                  <h5 class="card-title">Tarjeta 1</h5>
+                  <p class="card-text">Contenido de la tarjeta 1.</p>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Card 2</h5>
-                  <p class="card-text">Descripción de la tarjeta 2.</p>
+                  <h5 class="card-title">Tarjeta 2</h5>
+                  <p class="card-text">Contenido de la tarjeta 2.</p>
                 </div>
               </div>
             </div>
@@ -50,7 +67,7 @@
       </div>
 
       <!-- Footer -->
-      <footer class="bg-dark text-white text-center p-2">
+      <footer class="bg-dark text-white text-center py-2">
         &copy; 2025 Mi Dashboard - Todos los derechos reservados
       </footer>
     </div>
