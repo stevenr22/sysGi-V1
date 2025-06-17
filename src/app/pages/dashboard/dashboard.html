@@ -1,40 +1,77 @@
-<!-- Header -->
-<header class="bg-blue-600 text-white p-4 shadow-md">
-  <h1 class="text-2xl font-bold">Panel de Control</h1>
-</header>
+<!-- Layout principal -->
+<div class="flex h-screen bg-gray-100">
 
-<div class="flex min-h-screen">
   <!-- Sidebar -->
-  <nav class="w-64 bg-white shadow-md p-4">
-    <ul class="space-y-4">
-      <li><a routerLink="/" class="block px-4 py-2 rounded hover:bg-blue-100">Inicio</a></li>
-      <li><a routerLink="/usuarios" class="block px-4 py-2 rounded hover:bg-blue-100">Usuarios</a></li>
-      <li><a routerLink="/reportes" class="block px-4 py-2 rounded hover:bg-blue-100">Reportes</a></li>
-      <li><a routerLink="/configuracion" class="block px-4 py-2 rounded hover:bg-blue-100">Configuración</a></li>
-    </ul>
-  </nav>
+  <div class="w-64 bg-white shadow-md h-full">
+    <div class="p-6 font-bold text-xl">Mi Panel</div>
+    <nav class="mt-4">
+      <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-200">Inicio</a>
+      <!-- Otros enlaces si deseas -->
+    </nav>
+  </div>
 
-  <!-- Main -->
-  <main class="flex-1 p-6">
-    <h2 class="text-xl font-semibold mb-4">Bienvenido, Administrador</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="text-lg font-medium">Estadística 1</h3>
-        <p class="text-gray-600 mt-2">Contenido 1</p>
+  <!-- Contenido principal -->
+  <div class="flex-1 flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-semibold">Dashboard</h1>
+      <div>
+        <button class="bg-gray-200 px-4 py-2 rounded-full">Usuario</button>
       </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="text-lg font-medium">Estadística 2</h3>
-        <p class="text-gray-600 mt-2">Contenido 2</p>
+    </header>
+
+    <!-- Contenido del dashboard -->
+    <main class="flex-1 overflow-y-auto p-6">
+
+      <!-- Sección de tarjetas (KPIs) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-500">Usuarios</p>
+          <h2 class="text-2xl font-bold">150</h2>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-500">Ventas</p>
+          <h2 class="text-2xl font-bold">$4,200</h2>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-500">Visitas</p>
+          <h2 class="text-2xl font-bold">12,000</h2>
+        </div>
       </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="text-lg font-medium">Estadística 3</h3>
-        <p class="text-gray-600 mt-2">Contenido 3</p>
+
+      <!-- Tabla de datos -->
+      <div class="bg-white rounded-lg shadow overflow-x-auto">
+        <table class="min-w-full">
+          <thead class="bg-gray-200 text-gray-700">
+            <tr>
+              <th class="text-left px-6 py-3">Nombre</th>
+              <th class="text-left px-6 py-3">Correo</th>
+              <th class="text-left px-6 py-3">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="px-6 py-4">Ana Pérez</td>
+              <td class="px-6 py-4">ana@example.com</td>
+              <td class="px-6 py-4">Activo</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4">Carlos Díaz</td>
+              <td class="px-6 py-4">carlos@example.com</td>
+              <td class="px-6 py-4">Inactivo</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4">Lucía Gómez</td>
+              <td class="px-6 py-4">lucia@example.com</td>
+              <td class="px-6 py-4">Activo</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-  </main>
+
+    </main>
+
+  </div>
+
 </div>
-
-<!-- Footer -->
-<footer class="bg-blue-600 text-white text-center p-4">
-  <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
-</footer>
