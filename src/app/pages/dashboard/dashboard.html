@@ -1,144 +1,165 @@
-<div class="d-flex" style="min-height: 100vh;">
-  <!-- Sidebar -->
-  <nav class="bg-dark text-white p-3" style="min-width: 220px;">
-    <h4 class="text-white">Admin</h4>
-    <ul class="nav flex-column mt-4">
-      <li class="nav-item mb-2">
-        <a class="nav-link text-white" data-bs-toggle="collapse" href="#dashboardMenu" role="button">
-          <strong>📊 Dashboard</strong>
-        </a>
-        <div class="collapse" id="dashboardMenu">
-          <ul class="nav flex-column ms-3">
-            <li class="nav-item"><a class="nav-link text-white" href="#">Resumen</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Estadísticas</a></li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item mb-2">
-        <a class="nav-link text-white" data-bs-toggle="collapse" href="#configMenu" role="button">
-          <strong>⚙️ Configuración</strong>
-        </a>
-        <div class="collapse" id="configMenu">
-          <ul class="nav flex-column ms-3">
-            <li class="nav-item"><a class="nav-link text-white" href="#">Perfil</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Seguridad</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </nav>
+<!-- ✅ Navbar superior con botón hamburguesa -->
+<nav class="navbar navbar-dark bg-dark px-3">
+  <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+    ☰
+  </button>
+  <span class="navbar-brand ms-2">Mi Dashboard</span>
+</nav>
 
-  <!-- Contenido principal -->
-  <div class="flex-grow-1 p-4 bg-light">
-    <!-- Encabezado -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="fw-semibold">Panel de Control</h2>
-      <button class="btn btn-outline-secondary btn-sm">Cerrar sesión</button>
+<!-- ✅ Sidebar con offcanvas -->
+<div class="offcanvas-lg offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
+  <div class="offcanvas-header border-bottom d-lg-none">
+    <h5 class="offcanvas-title">Menú</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body p-3">
+    <h5 class="mb-3">Panel</h5>
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action bg-dark text-white" data-bs-toggle="collapse" href="#menu1" role="button">📊 Dashboard</a>
+      <div class="collapse show" id="menu1">
+        <a href="#" class="list-group-item list-group-item-action ps-5 bg-dark text-white">Resumen</a>
+        <a href="#" class="list-group-item list-group-item-action ps-5 bg-dark text-white">Estadísticas</a>
+      </div>
+      <a class="list-group-item list-group-item-action bg-dark text-white mt-2" data-bs-toggle="collapse" href="#menu2" role="button">⚙️ Configuración</a>
+      <div class="collapse" id="menu2">
+        <a href="#" class="list-group-item list-group-item-action ps-5 bg-dark text-white">Perfil</a>
+        <a href="#" class="list-group-item list-group-item-action ps-5 bg-dark text-white">Seguridad</a>
+      </div>
     </div>
+  </div>
+</div>
 
-    <!-- Tarjetas -->
-    <div class="row mb-4">
-      <div class="col-md-4 mb-3">
-        <div class="card shadow-sm border-0">
-          <div class="card-body">
-            <h6 class="text-muted">Usuarios</h6>
-            <h4 class="fw-bold">120</h4>
-          </div>
+<!-- ✅ Contenido principal -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar visible solo en LG+ -->
+    <div class="d-none d-lg-block col-lg-2 bg-dark text-white p-3">
+      <h5 class="mb-3">Panel</h5>
+      <div class="list-group list-group-flush">
+        <a class="list-group-item list-group-item-action bg-dark text-white" data-bs-toggle="collapse" href="#menu1lg" role="button">📊 Dashboard</a>
+        <div class="collapse show" id="menu1lg">
+          <a href="#" class="list-group-item list-group-item-action ps-5 bg-dark text-white">Resumen</a>
+          <a href="#" class="list-group-item list-group-item-action ps-5 bg-dark text-white">Estadísticas</a>
         </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <div class="card shadow-sm border-0">
-          <div class="card-body">
-            <h6 class="text-muted">Ventas</h6>
-            <h4 class="fw-bold">$3,800</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <div class="card shadow-sm border-0">
-          <div class="card-body">
-            <h6 class="text-muted">Pendientes</h6>
-            <h4 class="fw-bold">5</h4>
-          </div>
+        <a class="list-group-item list-group-item-action bg-dark text-white mt-2" data-bs-toggle="collapse" href="#menu2lg" role="button">⚙️ Configuración</a>
+        <div class="collapse" id="menu2lg">
+          <a href="#" class="list-group-item list-group-item-action ps-5 bg-dark text-white">Perfil</a>
+          <a href="#" class="list-group-item list-group-item-action ps-5 bg-dark text-white">Seguridad</a>
         </div>
       </div>
     </div>
 
-    <!-- Formulario -->
-    <div class="card shadow-sm border-0 mb-4">
-      <div class="card-body">
-        <h5 class="card-title mb-3">Registrar nuevo usuario</h5>
-        <form>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" placeholder="Ingrese nombre">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Correo</label>
-              <input type="email" class="form-control" placeholder="correo@ejemplo.com">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Contraseña</label>
-              <input type="password" class="form-control" placeholder="*******">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Rol</label>
-              <select class="form-select">
-                <option>Administrador</option>
-                <option>Editor</option>
-                <option>Invitado</option>
-              </select>
-            </div>
-          </div>
-          <div class="mt-4">
-            <button type="submit" class="btn btn-primary">Registrar</button>
-          </div>
-        </form>
+    <!-- Contenido principal -->
+    <main class="col-lg-10 p-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-semibold">Panel de Control</h2>
+        <button class="btn btn-outline-secondary btn-sm">Cerrar sesión</button>
       </div>
-    </div>
 
-    <!-- Tabla de usuarios -->
-    <div class="card shadow-sm border-0">
-      <div class="card-body">
-        <h5 class="card-title mb-3">Lista de usuarios</h5>
-        <div class="table-responsive">
-          <table class="table table-hover align-middle">
-            <thead class="table-light">
-              <tr>
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Rol</th>
-                <th>Estado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Ana Torres</td>
-                <td>ana@gmail.com</td>
-                <td>Administrador</td>
-                <td><span class="badge bg-success">Activo</span></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>José Martínez</td>
-                <td>jose@hotmail.com</td>
-                <td>Editor</td>
-                <td><span class="badge bg-warning text-dark">Pendiente</span></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Lucía Pérez</td>
-                <td>lucia@empresa.com</td>
-                <td>Invitado</td>
-                <td><span class="badge bg-secondary">Inactivo</span></td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Tarjetas -->
+      <div class="row mb-4">
+        <div class="col-md-4 mb-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h6 class="text-muted">Usuarios</h6>
+              <h4 class="fw-bold">120</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h6 class="text-muted">Ventas</h6>
+              <h4 class="fw-bold">$3,800</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h6 class="text-muted">Pendientes</h6>
+              <h4 class="fw-bold">5</h4>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      <!-- Formulario -->
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Registrar nuevo usuario</h5>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Ingrese nombre">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" placeholder="correo@ejemplo.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="*******">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Rol</label>
+                <select class="form-select">
+                  <option>Administrador</option>
+                  <option>Editor</option>
+                  <option>Invitado</option>
+                </select>
+              </div>
+            </div>
+            <div class="mt-4">
+              <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Tabla -->
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Lista de usuarios</h5>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Correo</th>
+                  <th>Rol</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Ana Torres</td>
+                  <td>ana@gmail.com</td>
+                  <td>Administrador</td>
+                  <td><span class="badge bg-success">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>José Martínez</td>
+                  <td>jose@hotmail.com</td>
+                  <td>Editor</td>
+                  <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Lucía Pérez</td>
+                  <td>lucia@empresa.com</td>
+                  <td>Invitado</td>
+                  <td><span class="badge bg-secondary">Inactivo</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 </div>
