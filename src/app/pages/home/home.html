@@ -1,13 +1,13 @@
-<div class="container text-center mt-5">
-  <h1>Bienvenido, al sistema gestión de usuarios sysGi</h1>
-  <p class="lead mt-3">¿Qué desea realizar?</p>
+<div class="d-flex flex-column justify-content-center align-items-center vh-100 text-center px-3">
+  <h1 class="mb-3">Bienvenido, al sistema gestión de usuarios sysGi</h1>
+  <p class="lead mb-4">¿Qué desea realizar?</p>
 
-  <div class="d-flex justify-content-center gap-3 mt-4">
-    <app-boton-g color="primary" (onClick)="iniciarSesion()">
+  <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+    <app-boton-g color="primary" class="px-4 py-2 fs-5">
       <i class="fas fa-sign-in-alt me-2"></i> Iniciar sesión
     </app-boton-g>
-    
-    <app-boton-g color="success" (onClick)="registrarDatos()">
+
+    <app-boton-g color="success" class="px-4 py-2 fs-5">
       <i class="fas fa-user-plus me-2"></i> Registrar datos
     </app-boton-g>
   </div>
