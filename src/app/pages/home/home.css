@@ -1,29 +1,15 @@
-/* Fondo degradado */
+/* Fondo con degradado minimalista */
 .welcome-container {
   background: linear-gradient(to bottom right, #e6f2ff, #e8fdf1);
 }
 
-/* Icono superior */
+/* Icono superior animado */
 .icon-container i {
   animation: popIn 0.6s ease-out;
+  color: #007bff; /* azul Bootstrap */
 }
 
-/* Estilo para botones */
-.welcome-btn {
-  padding: 14px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-/* Hover animación */
-.welcome-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Animación inicial */
+/* Animación de aparición */
 @keyframes popIn {
   0% {
     opacity: 0;
@@ -33,4 +19,45 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Botones estilo moderno */
+.welcome-btn {
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Animación al hacer hover */
+.welcome-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo específico para el botón claro */
+.btn-clean {
+  border: none !important;
+  background-color: #f8f9fa !important;
+  color: #495057 !important;
+}
+
+/* Hover del botón claro */
+.btn-clean:hover {
+  background-color: #e2e6ea !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajuste para íconos dentro del botón */
+.welcome-btn i {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+/* Animación del ícono al hacer hover */
+.welcome-btn:hover i {
+  transform: translateX(5px);
 }
