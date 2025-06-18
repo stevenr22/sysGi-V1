@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Header } from "../../components/partsDashboard/header/header";
-import { Navbar } from "../../components/partsDashboard/navbar/navbar";
-import { Main } from "../../components/partsDashboard/main/main";
-import { Footer } from "../../components/partsDashboard/footer/footer";
+import { Header } from "../../shared/components/partsDashboard/header/header";
+import { Navbar } from "../../shared/components/partsDashboard/navbar/navbar";
+import { Main } from "../../shared/components/partsDashboard/main/main";
+import { Footer } from "../../shared/components/partsDashboard/footer/footer";
 
 @Component({
   selector: 'app-dashboard',

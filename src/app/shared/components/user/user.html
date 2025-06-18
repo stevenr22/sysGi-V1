@@ -1,0 +1,18 @@
+<div class="text-container">
+    <p>user works!</p>
+    <app-boton-g [btnClass]="'btn btn-primary'" [type]="'button'" (onClick)="guardar()">
+        <i class="fa fa-check-circle me-2"></i>GUARDAR
+    </app-boton-g>
+
+    <app-boton-g [btnClass]="'btn btn-danger'" [type]="'button'" (onClick)="eliminar()">
+        <i class="fa fa-trash me-2"></i>ELIMINAR
+    </app-boton-g>
+    <app-boton-g [btnClass]="'btn btn-info'" [type]="'button'" (onClick)="informacion()">
+        <i class="fa fa-info-circle me-2"></i>INFORMACIÓN
+    </app-boton-g>
+
+    <app-boton-g [btnClass]="'btn btn-warning'" [type]="'button'" (onClick)="advertencia()">
+        <i class="fa fa-exclamation-triangle me-2"></i>ADVERTENCIA
+    </app-boton-g>
+
+</div>

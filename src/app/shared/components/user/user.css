@@ -1,0 +1,27 @@
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  gap: 2rem;
+}
+
+.text-container p {
+  padding: 1.5rem 3rem;
+  border: 2px solid #1976d2;
+  border-radius: 12px;
+  background: #f5faff;
+  color: #1976d2;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.text-container app-boton-g {
+  margin-top: 0.5rem;
+  /* Puedes agregar más estilos si tu componente lo permite */
+}

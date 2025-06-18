@@ -1,0 +1,8 @@
+<button 
+    
+    [type]="type"
+    [class]="btnClass"
+    [disabled]="disabled"
+    (click)="onClick.emit($event)">
+    <ng-content></ng-content> <!--AQUI SE INSERTA EL CONTENIDO QUE PONGAS DESDE AFUERA-->
+</button>
