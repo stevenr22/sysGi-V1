@@ -1,15 +1,13 @@
-/* Fondo con degradado minimalista */
+/* Fondo degradado suave */
 .welcome-container {
   background: linear-gradient(to bottom right, #e6f2ff, #e8fdf1);
 }
 
-/* Icono superior animado */
+/* Animación del icono de cabecera */
 .icon-container i {
   animation: popIn 0.6s ease-out;
-  color: #007bff; /* azul Bootstrap */
 }
 
-/* Animación de aparición */
 @keyframes popIn {
   0% {
     opacity: 0;
@@ -21,43 +19,32 @@
   }
 }
 
-/* Botones estilo moderno */
+/* Botones uniformes y elegantes */
 .welcome-btn {
-  padding: 14px;
-  font-size: 1.1rem;
+  padding: 12px;
+  font-size: 1.05rem;
   font-weight: 500;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.3s ease;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Animación al hacer hover */
+/* Efecto suave al pasar el mouse */
 .welcome-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
 }
 
-/* Estilo específico para el botón claro */
-.btn-clean {
-  border: none !important;
-  background-color: #f8f9fa !important;
-  color: #495057 !important;
-}
-
-/* Hover del botón claro */
-.btn-clean:hover {
-  background-color: #e2e6ea !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Ajuste para íconos dentro del botón */
+/* Íconos armonizados */
 .welcome-btn i {
   font-size: 1.2rem;
   vertical-align: middle;
   transition: transform 0.3s ease;
 }
 
-/* Animación del ícono al hacer hover */
 .welcome-btn:hover i {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
