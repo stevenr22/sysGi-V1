@@ -7,85 +7,68 @@ import Swal from 'sweetalert2';
 })
 export class Notificacion {
 
-  /**
-   * Cambiar a `true` para usar ngx-toastr.
-   * Cambiar a `false` para usar SweetAlert2.
-   */
-  private usarToastr = true;
-
   constructor(private toastr: ToastrService) {}
 
-  /**
-   * Notificación de éxito
-   */
-  success(mensaje: string, titulo: string = 'Éxito') {
-    if (this.usarToastr) {
-      this.toastr.success(mensaje, titulo);
-    } else {
-      Swal.fire({
-        icon: 'success',
-        title: titulo,
-        text: mensaje,
-        timer: 2000,
-        showConfirmButton: false,
-        timerProgressBar: true,
-      });
-    }
+  // === TOASTR ===
+
+  mostrarToastSuccess(mensaje: string, titulo: string = 'Éxito') {
+    this.toastr.success(mensaje, titulo);
   }
 
-  /**
-   * Notificación de error
-   */
-  error(mensaje: string, titulo: string = 'Error') {
-    if (this.usarToastr) {
-      this.toastr.error(mensaje, titulo);
-    } else {
-      Swal.fire({
-        icon: 'error',
-        title: titulo,
-        text: mensaje,
-        confirmButtonText: 'Aceptar',
-      });
-    }
+  mostrarToastError(mensaje: string, titulo: string = 'Error') {
+    this.toastr.error(mensaje, titulo);
   }
 
-  /**
-   * Notificación de información
-   */
-  info(mensaje: string, titulo: string = 'Información') {
-    if (this.usarToastr) {
-      this.toastr.info(mensaje, titulo);
-    } else {
-      Swal.fire({
-        icon: 'info',
-        title: titulo,
-        text: mensaje,
-        timer: 2500,
-        showConfirmButton: false,
-        timerProgressBar: true,
-      });
-    }
+  mostrarToastInfo(mensaje: string, titulo: string = 'Información') {
+    this.toastr.info(mensaje, titulo);
   }
 
-  /**
-   * Notificación de advertencia
-   */
-  warning(mensaje: string, titulo: string = 'Advertencia') {
-    if (this.usarToastr) {
-      this.toastr.warning(mensaje, titulo);
-    } else {
-      Swal.fire({
-        icon: 'warning',
-        title: titulo,
-        text: mensaje,
-        confirmButtonText: 'Ok',
-      });
-    }
+  mostrarToastWarning(mensaje: string, titulo: string = 'Advertencia') {
+    this.toastr.warning(mensaje, titulo);
   }
 
-  /**
-   * Confirmación personalizada (solo con SweetAlert2)
-   */
+  // === SWEETALERT2 ===
+
+  mostrarSweetSuccess(mensaje: string, titulo: string = 'Éxito') {
+    Swal.fire({
+      icon: 'success',
+      title: titulo,
+      text: mensaje,
+      timer: 2000,
+      showConfirmButton: false,
+      timerProgressBar: true,
+    });
+  }
+
+  mostrarSweetError(mensaje: string, titulo: string = 'Error') {
+    Swal.fire({
+      icon: 'error',
+      title: titulo,
+      text: mensaje,
+      confirmButtonText: 'Aceptar',
+    });
+  }
+
+  mostrarSweetInfo(mensaje: string, titulo: string = 'Información') {
+    Swal.fire({
+      icon: 'info',
+      title: titulo,
+      text: mensaje,
+      timer: 2500,
+      showConfirmButton: false,
+      timerProgressBar: true,
+    });
+  }
+
+  mostrarSweetWarning(mensaje: string, titulo: string = 'Advertencia') {
+    Swal.fire({
+      icon: 'warning',
+      title: titulo,
+      text: mensaje,
+      confirmButtonText: 'OK',
+    });
+  }
+
   confirmar(mensaje: string, titulo: string = '¿Estás seguro?'): Promise<boolean> {
     return Swal.fire({
       title: titulo,
