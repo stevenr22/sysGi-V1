@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { User } from "./shared/components/user/user";
-// import { RouterModule } from '@angular/router';
+// import { User } from "./shared/components/user/user"; //pruebas
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [User],
+  imports: [RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

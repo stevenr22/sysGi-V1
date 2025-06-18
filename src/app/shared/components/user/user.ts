@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { BotonG } from "../boton-g/boton-g";
-import { Notificacion } from '../../services/notificacion';
-
-
+import { Notificacion } from '../../services/notificaciones/notificacion';
 
 @Component({
   selector: 'app-user',
@@ -12,37 +10,47 @@ import { Notificacion } from '../../services/notificacion';
 })
 export class User {
   constructor(private notificacion: Notificacion) {}
-  guardar(){
-    //Llamar al servicio de toast o de notificacion
-    this.notificacion.success('Usuario guardado con exito'); 
-  }
-  eliminar(){
-    //Llamar al servicio de toast o de notificacion
-    this.notificacion.error('Usuario eliminado');
-    
-    
 
+  // TOAST
+  guardar() {
+    this.notificacion.mostrarToastSuccess('Usuario guardado correctamente');
   }
-  async confirmarEliminacion(){
-    const confirmado = await this.notificacion.confirmar("ESta accion no se puede daeshacer");
-    if(confirmado){
-      this.notificacion.success("Usuario eliminado");
 
-    }else{
-      this.notificacion.info("eliminacion cancelada");
+  eliminar() {
+    this.notificacion.mostrarToastError('El usuario ha sido eliminado');
+  }
+
+  async confirmarEliminacion() {
+    const confirmado = await this.notificacion.confirmar("¿Estás seguro? Esta acción no se puede deshacer.");
+    if (confirmado) {
+      this.notificacion.mostrarToastSuccess("Usuario eliminado correctamente");
+    } else {
+      this.notificacion.mostrarToastInfo("Eliminación cancelada");
     }
   }
-  
 
-  informacion(){
-    //Llamar al servicio de toast o de notificacion
-    this.notificacion.info('Noticia entrante');
-
+  informacion() {
+    this.notificacion.mostrarToastInfo('Tienes una nueva notificación');
   }
 
-  advertencia(){
-    //Llamar al servicio de toast o de notificacion
-    this.notificacion.warning("Cuidado con lo que haces");
+  advertencia() {
+    this.notificacion.mostrarToastWarning("Atención: revisa los datos antes de continuar");
+  }
 
+  // SWEET ALERT
+  guardarSwal() {
+    this.notificacion.mostrarSweetSuccess("¡Usuario guardado exitosamente!");
+  }
+
+  eliminarSwal() {
+    this.notificacion.mostrarSweetError("El usuario ha sido eliminado permanentemente");
+  }
+
+  informacionSwal() {
+    this.notificacion.mostrarSweetInfo("Información: los datos han sido almacenados");
+  }
+
+  advertenciaSwal() {
+    this.notificacion.mostrarSweetWarning("Advertencia: esta acción puede tener consecuencias");
   }
 }
