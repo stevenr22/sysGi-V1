@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 @Injectable({
   providedIn: 'root',
 })
-export class NotificacionService {
+export class Notificacion {
 
   /**
    * Cambiar a `true` para usar ngx-toastr.

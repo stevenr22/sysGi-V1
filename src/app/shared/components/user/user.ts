@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BotonG } from "../boton-g/boton-g";
 import { Notificacion } from '../../services/notificacion';
 
+
 @Component({
   selector: 'app-user',
   imports: [BotonG],
@@ -19,7 +20,9 @@ export class User {
     this.notificacion.error('Usuario eliminado');
     
     
+
   }
+  
 
   informacion(){
     //Llamar al servicio de toast o de notificacion
