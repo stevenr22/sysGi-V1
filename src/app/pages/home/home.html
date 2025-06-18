@@ -5,11 +5,21 @@
     <p class="mb-4">¿Qué deseas hacer a continuación?</p>
 
     <div class="d-grid gap-3">
-      <a href="/login" class="btn btn-primary shadow-sm">
-        <i class="fas fa-right-to-bracket me-2"></i> Iniciar sesión
-      </a>
-      <a href="/registro" class="btn btn-outline-secondary shadow-sm">
-        <i class="fas fa-user-plus me-2"></i> Registrar nuevo usuario
-      </a>
+      <app-boton-g
+        routerLink="/login"
+        [color]="'primary'"
+        [size]="'lg'"
+        class="rounded-pill py-3 px-4 minimal-btn"
+      >
+        <i class="fas fa-sign-in-alt me-2"></i> Iniciar sesión
+      </app-boton-g>
+      <app-boton-g
+        routerLink="/register"
+        [color]="'outline-primary'"
+        [size]="'lg'"
+        class="rounded-pill py-3 px-4 minimal-btn"
+      >
+        <i class="fas fa-user-plus me-2"></i> Registrarse
+      </app-boton-g>
     </div>
   </div>
