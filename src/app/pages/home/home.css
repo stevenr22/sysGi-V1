@@ -5,11 +5,19 @@
   --bg-transparent: transparent;
 }
 
+.welcome-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-transparent);
+}
+
 .welcome-card {
   background: var(--bg-transparent);
-  padding: 3rem 2rem;
+  padding: 2.2rem 1.5rem;
   text-align: center;
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
   animation: fadeIn 0.8s ease-in-out forwards;
   margin: 0 auto;
@@ -17,16 +25,16 @@
 }
 
 .welcome-icon {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   color: var(--primary-color);
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   animation: subtleBounce 2s ease-in-out infinite alternate;
 }
 
 .minimal-btn {
-  font-size: 1.1rem;
-  padding: 0.75rem 1.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.05rem;
+  padding: 0.65rem 1.2rem;
+  transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
   user-select: none;
 }
@@ -40,6 +48,22 @@
 
 .text-muted {
   color: var(--text-muted);
+}
+
+.d-grid {
+  display: grid;
+}
+
+.gap-2 {
+  gap: 0.8rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 0.8rem !important;
 }
 
 /* Animaciones */
