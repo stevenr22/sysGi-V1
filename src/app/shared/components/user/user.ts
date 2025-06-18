@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BotonG } from "../boton-g/boton-g";
+import { BotonG } from "../botonG/boton-g";
 import { Notificacion } from '../../services/notificaciones/notificacion';
 
 @Component({

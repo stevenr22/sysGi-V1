@@ -2,12 +2,15 @@ import { Routes } from '@angular/router';
 import { Login } from './auth/login/login';
 import { Register } from './auth/register/register';
 import { Dashboard } from './pages/dashboard/dashboard';
+import { Notfound } from './shared/components/notfound/notfound';
+import { Home } from './pages/home/home';
+
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'login',
-        pathMatch: 'full'
+        component: Home
+
     },
     {
         path: 'login',
@@ -20,9 +23,9 @@ export const routes: Routes = [
     {
         path: 'dashboard',
         component: Dashboard
+    },
+    {
+        path: '**',
+        component: Notfound
     }
-    // {
-    //     path: '**',
-    //     component: NotFound
-    // }
 ];
