@@ -3,6 +3,7 @@ import { BotonG } from "../boton-g/boton-g";
 import { Notificacion } from '../../services/notificacion';
 
 
+
 @Component({
   selector: 'app-user',
   imports: [BotonG],
@@ -21,6 +22,15 @@ export class User {
     
     
 
+  }
+  async confirmarEliminacion(){
+    const confirmado = await this.notificacion.confirmar("ESta accion no se puede daeshacer");
+    if(confirmado){
+      this.notificacion.success("Usuario eliminado");
+
+    }else{
+      this.notificacion.info("eliminacion cancelada");
+    }
   }
   
 
