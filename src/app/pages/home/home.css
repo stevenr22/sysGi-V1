@@ -1,27 +1,48 @@
-
+:root {
+  --primary-color: #0d6efd;
+  --primary-color-hover: #0b5ed7;
+  --text-muted: #6c757d;
+  --bg-transparent: transparent;
+}
 
 .welcome-card {
-  background: transparent;
+  background: var(--bg-transparent);
   padding: 3rem 2rem;
   text-align: center;
   max-width: 500px;
   width: 100%;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .welcome-icon {
   font-size: 4.5rem;
-  color: #0d6efd;
+  color: var(--primary-color);
   margin-bottom: 1rem;
-  animation: bounce 1.2s infinite alternate;
+  animation: subtleBounce 2s ease-in-out infinite alternate;
 }
 
-.btn,
 .minimal-btn {
   font-size: 1.1rem;
   padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
+.minimal-btn:hover,
+.minimal-btn:focus {
+  outline: none;
+  background-color: var(--primary-color-hover);
+  color: white;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -33,11 +54,11 @@
   }
 }
 
-@keyframes bounce {
-  from {
+@keyframes subtleBounce {
+  0%, 100% {
     transform: translateY(0);
   }
-  to {
-    transform: translateY(-8px);
+  50% {
+    transform: translateY(-6px);
   }
 }
