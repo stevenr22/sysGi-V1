@@ -6,22 +6,18 @@
   <h2 class="fw-bold mb-2">¡Bienvenido a <span class="text-primary">SysGi</span>!</h2>
   <p class="text-muted fs-5 mb-1">Sistema de Gestión de Usuarios</p>
   <p class="mb-4">¿Qué deseas hacer a continuación?</p>
+  
+  <app-boton-g 
+  color="success"
+  routerLink="/login"
 
-  <div class="d-flex flex-column gap-3 w-100" style="max-width: 320px;">
-    <app-boton-g
-      color="primary"
-      class="welcome-btn"
-    
-    >
-      <i class="fas fa-sign-in-alt me-2"></i> Iniciar sesión
-    </app-boton-g>
+  >
+    Iniciar sesion
+  </app-boton-g>
+  <app-boton-g
+ routerLink= "/register">
+    Registrar datos
+  </app-boton-g>
 
-    <app-boton-g
-      color="outline-secondary"
-      class="welcome-btn"
-    
-    >
-      <i class="fas fa-user-plus me-2"></i> Registrar nuevo usuario
-    </app-boton-g>
-  </div>
+ 
 </div>
