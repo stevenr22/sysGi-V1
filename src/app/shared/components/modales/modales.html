@@ -1,0 +1,24 @@
+<div class="modal fade" [id]="modalId" tabindex="-1" aria-hidden="true" aria-labelledby="{{modalId}}Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- CONTENIDO HEADER -->
+            <div class="modal-header">
+                <h1 class="modal-title fs-5"><ng-content select="[modal-title]"></ng-content></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- CONTENIDO BODY -->
+            <div class="modal-body">
+                <ng-content select="[modal-body]"></ng-content>
+
+            </div>
+
+            <!-- CONTENIDO FOOTER -->
+             <div class="modal-footer">
+                <ng-content select="[modal-footer]"></ng-content>
+
+             </div>
+
+        </div>
+    </div>
+
+</div>
