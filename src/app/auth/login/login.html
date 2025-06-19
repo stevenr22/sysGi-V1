@@ -48,25 +48,20 @@
   </div>
 </div>
 
-<app-modales id="modalRecuperar">
-  <div modal-title>Recuperar contraseña</div>
-
-  <div modal-body>
-    <p>random</p>
-  </div>
-
-
-  <div modal-footer>
-    <app-boton-g 
-    color="secondary"
-    btnClass="me-2"
-    [dismiss]="'modal'"
-    Cancelar
-    ></app-boton-g>
-
-    <app-boton-g color="primary" (onClick)="enviarRecuperacion()">
-
-    </app-boton-g>
-
-  </div>
-</app-modales>
+<!-- MODAL -->
+ <app-modales modalId="modalRecuperar" titulo="Cambiar contraseña" (guardar)="handleGuardar()">
+  <form>
+    <div class="mb-3">
+      <label for="actualContraseña" class="form-label">Actual contraseña:</label>
+      <input type ="password" class="form-control" placeholder="Ingrese su actual contraseña">
+    </div>
+    <div class="mb-3">
+      <label for="nuevaContraseña" class="form-label">Nueva contraseña:</label>
+      <input type ="password" class="form-control" placeholder="Ingrese su nueva contraseña">
+    </div>
+    <div class="mb-3">
+      <label for="confirmarContraseña" class="form-label">Confirmar contraseña:</label>
+      <input  type ="password" class="form-control" placeholder="Ingrese su nuevamente la contraseña">
+    </div>
+  </form>
+ </app-modales>

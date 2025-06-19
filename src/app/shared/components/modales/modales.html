@@ -1,23 +1,19 @@
-<div class="modal fade" [id]="modalId" tabindex="-1" aria-hidden="true" aria-labelledby="{{modalId}}Label" aria-hidden="true">
+<!-- MODAL REUTILIZABLE -->
+<div class="modal fade" [id]="modalId" tabindex="-1" [attr.aria-labelledby]="modalId + 'Label'">
     <div class="modal-dialog">
         <div class="modal-content">
-            <!-- CONTENIDO HEADER -->
             <div class="modal-header">
-                <h1 class="modal-title fs-5"><ng-content select="[modal-title]"></ng-content></h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" [id]="modalId + 'Label'">{{ titulo }}</h5>
+                <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="cerrar"
+                    ></button>
             </div>
-            <!-- CONTENIDO BODY -->
             <div class="modal-body">
-                <ng-content select="[modal-body]"></ng-content>
-
+                <ng-content></ng-content>
             </div>
-
-            <!-- CONTENIDO FOOTER -->
-             <div class="modal-footer">
-                <ng-content select="[modal-footer]"></ng-content>
-
-             </div>
-
+            <div class="modal-footer">
+                <app-boton-g type="button"  data-bs-dismiss="modal"> Cerrar</app-boton-g>
+                <app-boton-g type="button" color="success" (onClick)="onGuardar()">Guardar</app-boton-g>
+            </div>
         </div>
     </div>
 
