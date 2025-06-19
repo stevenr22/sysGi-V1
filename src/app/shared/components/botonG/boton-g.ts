@@ -1,4 +1,4 @@
-import { Component, EventEmitter, INJECTOR, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-boton-g',
